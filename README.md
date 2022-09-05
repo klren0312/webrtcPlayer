@@ -16,7 +16,11 @@
 
 ### 2. 初始化播放器
 ```js
-const player = new webrtcPlayer(document.querySelector('.rtc-player'))
+const player = new webrtcPlayer({
+  dom: document.querySelector('.rtc-player'),
+  showControls: false, // 是否显示视频工具栏
+  isAutoplay: true // 是否自动播放
+})
 ```
 
 ### 3. 播放

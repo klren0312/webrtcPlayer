@@ -1,16 +1,16 @@
 class webrtcPlayer {
   _defaultPath = '/rtc/v1/play/'
-  constructor(dom) {
-    this.init(dom)
+  constructor(config) {
+    this.init(config)
   }
-  init(dom) {
+  init(config) {
     this.pc = new RTCPeerConnection(null)
     this.stream = new MediaStream()
-
     // 按照在传入的dom下插入video
+    const { dom, showControls = false, isAutoplay = true } = config
     this.video = document.createElement('video')
-    this.video.controls = true
-    this.video.autoplay = true
+    this.video.controls = showControls
+    this.video.autoplay = isAutoplay
     this.video.width = dom.offsetWidth
     this.video.height = dom.offsetHeight
     dom.appendChild(this.video)

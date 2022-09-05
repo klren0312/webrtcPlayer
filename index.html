@@ -23,7 +23,9 @@
     <script src="./adapter-7.4.0.min.js"></script>
     <script src="./webrtcPlayer.js"></script>
     <script>
-      const player = new webrtcPlayer(document.querySelector('.rtc-player'))
+      const player = new webrtcPlayer({
+        dom: document.querySelector('.rtc-player')
+      })
       function start() {
         const url = document.getElementById('rtc-url-input').value
         player.play(url)
