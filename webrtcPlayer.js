@@ -160,7 +160,7 @@ class webrtcPlayer {
 
       if (schema === 'http') {
         port = 80
-      } else if (schema === 'http') {
+      } else if (schema === 'https') {
         port = 443
       } else if (schema === 'rtmp') {
         port = 1935
