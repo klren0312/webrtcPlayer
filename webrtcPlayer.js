@@ -169,13 +169,13 @@ class webrtcPlayer {
 
 
     const ret = {
-      url: url,
-      schema: schema,
+      url,
+      schema,
       server: a.hostname,
-      port: port,
-      vhost: vhost,
-      app: app,
-      stream: stream,
+      port,
+      vhost,
+      app,
+      stream,
     }
 
     this._fillQuery(a.search, ret)
